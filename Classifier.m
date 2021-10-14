@@ -35,6 +35,11 @@ function [Err, Acc]=Classifier(Features, Labels, FeatureRows)
 
         Out = predict(Model, TestData);             % Validate Model
 
+        % % Train Model Using LDA
+        % Model = fitcdiscr(TrainData, TrainLabel, 'DiscrimType' ...
+        %    , 'pseudolinear');
+        % Out  = predict(Model, TestData);             % Validate Model
+
         % % Train Model Using Decision Tree
         % Model = fitctree(TrainData, TrainLabel);
         % Out  = predict(Model, TestData);             % Validate Model
